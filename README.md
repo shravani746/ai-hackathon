@@ -1,38 +1,48 @@
-# AI Express Hackathon - Track 1
+# AI Express Hackathon - Track 1 FINAL
 
 ## Warehouse Logistics Agent
 
-A Python implementation of A* Search using Manhattan Distance for a warehouse forklift navigating around static shelf obstacles.
+**Algorithm:** A* Search  
+**Heuristic:** Manhattan Distance  
+**Environment:** 10x10 warehouse with static shelf obstacles  
+**GUI:** Python Tkinter
 
 ### Files
 
-- `algorithm.py` - A* Search, Manhattan heuristic, path reconstruction, metrics, search trace.
-- `environment.py` - Warehouse grid, start and goal.
-- `main.py` - Tkinter visualization, forklift animation, and metrics display.
+- `algorithm.py` — supplied Track 1 A* implementation.
+- `environment.py` — re-exports the exact grid/start/goal used by the algorithm.
+- `main.py` — interactive Tkinter visualizer and forklift animation.
+- `run.bat` — one-click Windows launcher.
 
-### Requirements
+### How to run
 
-- Python 3.x
-- Tkinter (normally included with the standard Windows Python installation)
+1. Extract this folder.
+2. Keep all Python files together.
+3. Double-click `run.bat`.
 
-No third-party packages are required.
+Or open Command Prompt in the folder and run:
 
-### Run
-
-Open Command Prompt in this folder:
-
-```bash
+```text
 python main.py
 ```
 
-### Demonstration
+No third-party Python packages are required.
 
-The application:
-1. Runs A* using Manhattan Distance.
-2. Records expanded nodes and path cost.
-3. Displays the warehouse grid.
-4. Shows the optimal route.
-5. Animates the forklift step-by-step to the loading bay.
-6. Displays path cost, expanded nodes, and execution time.
+### Controls
 
-Track 1 requirement: A* Search with Manhattan Distance.
+- **RUN A*** — calculate the path and start the demonstration.
+- **PAUSE** — pause the forklift.
+- **RESUME** — continue.
+- **RESET** — return to the starting state.
+- **Animation speed** — control how quickly the forklift moves.
+
+### What the demo shows
+
+- Start and goal
+- Static shelves
+- A* expanded nodes
+- Optimal path
+- Autonomous forklift movement
+- Path cost
+- Expanded-node count
+- Execution time
